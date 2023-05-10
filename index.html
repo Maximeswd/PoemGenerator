@@ -1,0 +1,32 @@
+{% include 'header.html' %}
+<!-- Masthead-->
+<section class="masthead">
+    <div class="py-5 container align-items-center">
+        <div class="justify-content-center">
+            <div class="text-center container">
+                <div class="container px-4 px-lg-5">
+                    <div class="row gx-4 gx-lg-5 justify-content-center">
+                        <div class="col-lg-8 py-5">
+                            <form class="was-validated" method="post">
+                                <div class="mb-3">
+                                    <h3 class="text-white">Tell me how you feel</h3>
+                                    <label for="validationTextarea"></label>
+                                    <input class="form-control " id="validationTextarea" name="user_input"
+                                        placeholder="I feel ..." required></textarea>
+                                </div>
+                                <button class="btn btn-primary" type="submit"><i
+                                        class="fa-solid fa-square-arrow-up-right fa-2xl"></i></button>
+                            </form>
+                        </div>
+                        <div class="container content text-justify col-lg-8 py-2">
+                            {% if ai_answer %}
+                            <h6 class="color-white">{{ ai_answer }}</h6>
+                            {% endif %}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% include 'footer.html' %}
+</section>
